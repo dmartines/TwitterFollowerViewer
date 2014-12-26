@@ -43,10 +43,10 @@
 	    		$('#error-text').show();
 	    	} else {
 	    		$('#error-text').hide();
-	    		var newURL = 'http://localhost:8080/tf/#/' + $('#twitter-handle').val();
+	    		var newURL = 'tf/#/' + $('#twitter-handle').val();
 	    		window.location.href = newURL;
 	    	}
-    	});
+		});
 	    $('#twitter-handle').keydown(function(event){ 
 	        var keyCode = (event.keyCode ? event.keyCode : event.which);   
 	        if (keyCode == 13) {
@@ -54,7 +54,7 @@
 		    		$('#error-text').show();
 		    	} else {
 		    		$('#error-text').hide();
-		    		var newURL = 'http://localhost:8080/tf/#/' + $('#twitter-handle').val();
+		    		var newURL = 'tf/#/' + $('#twitter-handle').val();
 		    		window.location.href = newURL;
 		    	}
 	        }
