@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+  </head>
+  <body>
+  	<div style="display: -webkit-inline-box;">
+	  	<div class="twitter-icon">
+	  		<img src="img/twitter-icon.png">
+	  	</div>
+	  	<div class="handle-search">
+	  		<input type="text" name="handle" class="handle-input text1" placeholder="Enter handle">
+	  		<a href="/about" class="text1" style="padding-left:20px;">About</a>
+	  	</div>
+  	</div>
+  	<div class="container">
+  	
+  		<div class="row">
+  			<div class="span12">
+  				<p class="home-text">Welcome to Twilowers!</p>
+  				<p class="home-text">Find your Twitter followers</p>
+			</div>
+  			<div class="span12 input-span"> 
+  				<input type="text" class="twitter-input-large" id="twitter-handle" placeholder="Enter your Twitter handle">
+  				<input type="button" class="go-button" id="go-button">
+  				<p class="error-text" id="error-text" style="display:none; ">Please enter a valid Twitter handle</p>
+			</div>
+  			<div class="span12">
+  				<p class="text2">This prototype does not store your information</p>
+  				<p class="text2">Currently limited to the latest 200 followers</p>
+			</div>
+  		</div>
+
+	</div> <!--  container  -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+	    $("#go-button").click(function() {
+	    	if ( $('#twitter-handle').val() == '' ) {
+	    		$('#error-text').show();
+	    	} else {
+	    		$('#error-text').hide();
+	    		var newURL = /#/ + $('#twitter-handle').val();
+	    		window.location();
+	    	}
+    	});
+    </script>
+  </body>
+</html>

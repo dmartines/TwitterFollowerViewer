@@ -1,0 +1,21 @@
+(function() {
+    
+    var app = angular.module('twitterApp', ['ngRoute']);
+    
+    app.config(['$routeProvider', '$locationProvider', 
+                function($routeProvider, $locationProvider) {
+    	
+        $routeProvider
+	        .when('/', {
+	            controller: 'TwitterController',
+	            templateUrl: 'app/views/followers.html'
+	        })
+	        .when('/:screenName', {
+                controller: 'twitterController2',
+                templateUrl: 'app/views/followers.html'
+	        })
+            .otherwise( { redirectTo: '/' } );
+        
+    }]);
+    
+}());

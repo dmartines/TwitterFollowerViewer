@@ -1,0 +1,48 @@
+(function() {
+
+    var TwitterController = function ($scope, twitterFactory, $routeParams) {
+    	
+        $scope.sortBy = 'name';
+        $scope.reverse = false;
+        $scope.followlist = null;
+        $scope.screenName = 'test';
+
+    	$scope.screenName = $routeParams.screenName;
+    	if ($scope.screenName == undefined) 
+    		$scope.followlist = [{'name':'Invalid screen name ' + $scope.screenName}];
+    	else
+    		init($scope.screenName);
+       
+    	function init() {
+        	$scope.loadFollowers = function() {
+        		twitterFactory.getFollowers($scope.screenName).then(function (response) {
+        			$scope.followlist = response.data;
+                }, function (response) {
+                    $scope.error = 'ERROR';
+                });
+        	};
+        		;
+        	/*twitterFactory.getFollowers().success(function(data) { 
+        		$scope.followlist = data;
+			}).error(function(status, headers, config) { 
+				$scope.followlist =  ['{"name":"No followers found"}'];
+				alert('Status: ' + status + '\nData: ' + data + '\nHeader: ' + config);
+			});*/
+
+    	}
+    	
+    	init();
+    	
+        $scope.doSort = function(propName) {
+            $scope.sortBy = propName;
+            $scope.reverse = !$scope.reverse;
+         };
+         
+    };
+    
+    TwitterController.$inject = ['$scope', 'twitterFactory', '$routeParams' ];
+
+    angular.module('twitterApp')
+      .controller('TwitterController', TwitterController);
+    
+}());

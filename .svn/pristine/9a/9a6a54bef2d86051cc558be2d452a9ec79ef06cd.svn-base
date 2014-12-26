@@ -1,0 +1,251 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-image: linear-gradient(-180deg, #03242B 0%, #2CDBFF 100%);
+}
+
+p {
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+}
+
+input::-webkit-input-placeholder{
+    color:#A3EFFF;
+}
+input:-moz-placeholder {
+    color:#A3EFFF;
+}
+
+.twitter-icon {
+	padding: 25px 25px;
+}
+
+.handle-search {
+	float: right;
+	padding: 25px 25px;
+}
+
+.text1 {
+	/* @Search handle text: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	font-size: 20px !IMPORTANT;
+	color: #A3EFFF !IMPORTANT;
+	line-height: 25px !IMPORTANT;
+}
+
+@media (max-width:767px) { 
+	.text2 {
+		font-size: 15px !IMPORTANT;
+		padding-bottom: 0px;
+		line-height: 15px !IMPORTANT;
+	}	
+}
+@media (min-width:768px) {
+	.text2 {
+		font-size: 20px !IMPORTANT;
+		line-height: 25px !IMPORTANT;
+	}	
+}
+.text2 {
+	/* @Search handle text: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	color: #A3EFFF !IMPORTANT;
+	text-align: center;
+}
+
+@media (max-width:767px) { 
+	font-size: 12px !IMPORTANT;
+}
+@media (min-width:768px) {
+	font-size: 20px !IMPORTANT;
+}
+.error-text {
+	/* @Search handle text: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	color: #F57F18 !IMPORTANT;
+	line-height: 25px !IMPORTANT;
+	text-align: center;
+	padding-top:5px;
+}
+
+
+@media (max-width:767px) { 
+	.handle-input {
+		display: none;
+	}
+}
+.handle-input {
+	/* Rectangle 7: */
+	background-color: #00485B !IMPORTANT;
+	border: 2px solid #F57F18 !IMPORTANT;
+	border-radius: 19px !IMPORTANT;
+	padding: 0px 0px 0px 10px;
+}
+.follower-search {
+	/* Rectangle 7: */
+	background-color: #00485B !IMPORTANT;
+	border: 2px solid #F57F18 !IMPORTANT;
+	border-radius: 19px !IMPORTANT;
+	padding: 0px 0px 0px 10px;
+}
+
+/* Home page */
+/* input-span */
+.input-span {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom:30px;
+}
+/* Home text */
+@media (max-width:767px) { 
+	.home-text {
+		font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+		font-size: 20px;
+		color: #A3EFFF;
+		/* line-height: 74px; */
+		text-align: center;
+	}
+}
+@media (min-width:768px) { 
+	.home-text {
+		font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+		font-size: 60px;
+		color: #A3EFFF;
+		line-height: 74px;
+		text-align: center;
+	}
+}
+/* Go: */
+.go-button {
+	background-image: url('../img/go-button-active.png');
+	border-radius: 10px;
+	width: 80px !IMPORTANT;
+	height: 60px;
+}
+.go-button:hover {
+	background-image: url('../img/go-button-hover.png');
+	border-radius: 10px;
+	width: 80px !IMPORTANT;
+	height: 60px;
+}
+@media (max-width:767px) { 
+	.go-a {
+		font-size: 15px !IMPORTANT;
+	}
+}
+@media (min-width:768px) { 
+	.go-a {
+		font-size: 30px !IMPORTANT;
+	}
+}
+.go-a {
+	padding: 5px 10px;
+	background-color: #F57F18;
+	color: #03242b !IMPORTANT;
+	border-radius: 10px;
+	margin-left: 10px;
+	box-shadow: 2px 2px 2px #337ab7;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	line-height: 25px !IMPORTANT;
+}
+.go-a:hover {
+	padding: 5px 10px;
+	background-color: #D8751F;
+	color: #03242b !IMPORTANT;
+	border-radius: 10px;
+	margin-left: 10px;
+	box-shadow: 2px 2px 2px #337ab7;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	line-height: 25px !IMPORTANT;
+}
+/* Rectangle 7: */
+@media (max-width:767px) { 
+	.twitter-input-large {
+		padding: 0px 0px 0px 10px !IMPORTANT;
+		margin: 0px !IMPORTANT;
+		width: 200px;
+		height: 35px !IMPORTANT;
+		background: #00485B !IMPORTANT;
+		border: 2px solid #F57F18 !IMPORTANT;
+		border-radius: 30px !IMPORTANT;
+		font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+		font-size: 15px !IMPORTANT;
+		color: #A3EFFF !IMPORTANT;
+		/* line-height: 37px !IMPORTANT; */
+	}
+}
+@media (min-width:768px) { 
+	.twitter-input-large {
+		padding: 0px 0px 0px 20px !IMPORTANT;
+		margin: 0px !IMPORTANT;
+		width: 500px;
+		height: 60px !IMPORTANT;
+		background: #00485B !IMPORTANT;
+		border: 2px solid #F57F18 !IMPORTANT;
+		border-radius: 30px !IMPORTANT;
+		font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+		font-size: 30px !IMPORTANT;
+		color: #A3EFFF !IMPORTANT;
+		line-height: 37px !IMPORTANT;
+	}
+}
+
+/* Profile window */
+.profile-window {
+	/* Rectangle 12: */
+	width: 290px;
+	height: 159px;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 4px 0px rgba(245,127,23,0.50), inset 0px 1px 3px 0px rgba(255,255,255,0.50), inset 0px -1px 3px 0px rgba(3,36,43,0.50);
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.profile-image {
+	padding: 0px 5px 5px 10px
+}
+
+.profile-name {
+	/* Mark Sacks, MA, PCC: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	font-size: 18px;
+	color: #03242B;
+	line-height: 23px;
+	margin: 0px !IMPORTANT;
+}
+
+.profile-handle {
+	/* @danmartines: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	font-size: 14px;
+	color: #8899A6;
+	line-height: 16px;
+	margin: 0px !IMPORTANT;
+}
+
+.profile-description {
+	/* CIO @visresearch. Fo: */
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica !IMPORTANT;
+	font-size: 14px;
+	color: #66757F;
+	line-height: 17px;
+	padding: 0px 10px 0px 10px;
+	overflow-y: hidden;
+	height: 78px;
+}
+
+/* About */
+@media (max-width:767px) { 
+	.dm-img {
+		max-width: 100px;
+		max-height: 100px;
+	}	
+}
+.builton-logo {
+	text-align: center;
+	padding: 20px;
+}

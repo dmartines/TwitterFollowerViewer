@@ -1,0 +1,30 @@
+{
+  "name": "TwitterFollowerViewer",
+  "version": "1.0.0",
+  "description": "Twitter Follower Viewer",
+  "main": "server.js",
+  "scripts": {
+    "test": "node webserver.js",
+    "start": "node webserver.js"
+  },
+  "dependencies": {
+    "express": "4.10.5"
+  },
+  "engines": {
+    "node": "0.10.33"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmartines/TwitterFollowerViewer.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Dan Martines",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/dmartines/TwitterFollowerViewer/issues"
+  },
+  "homepage": "https://github.com/dmartines/TwitterFollowerViewer",
+  "devDependencies": {}
+}

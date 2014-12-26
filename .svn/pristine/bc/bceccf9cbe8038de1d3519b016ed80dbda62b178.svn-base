@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+  </head>
+  <body>
+  
+  	<div class="container-fluid">
+	  	<div class="row">
+	  		<div class="col-md-6 col-xs-2">
+			  	<div class="twitter-icon">
+			  		<a href="/"><img src="../img/twitter-icon.png"></a>
+			  	</div>
+	  		</div>
+	  		<div class="col-md-6 col-xs-2" style="float:right; ">
+			  	<div class="handle-search">
+			  		<input type="text" name="handle" class="handle-input text1" id="twitter-handle" placeholder="Enter handle">
+			  		<a href="/about" class="text1" style="padding-left:20px;">About</a>
+			  	</div>
+	  		</div>
+	  	</div>
+  	</div>
+  	<div class="container">
+  	
+  		<div class="row">
+  			<div class="span12 input-span">
+  				<img class="dm-img" src="../img/dm-img.png">
+  				<p class="text2" style="padding-top:20px; ">Dan Martines</p>
+  				<p class="text2">Startup CTO, Entrepreneur, Web Developer</p>
+  				<p><a class="text2" href="mailto:dbmartines@gmail.com">dbmartines@gmail.com</a></p>
+			</div>
+  		</div>
+  		<div class="row" style="text-align: center; ">
+  			<div class="span12 input-span">
+  				<p class="text2">Built on:</p>
+  			</div>
+  		</div>
+  		<div class="row" style="display: table; margin-left: auto; margin-right: auto; ">
+  			<div class="col-md-3 builton-logo">
+  				<img src="../img/Node.png">
+			</div>
+  			<div class="col-md-3 builton-logo">
+  				<img src="../img/Angular.png">
+			</div>
+  			<div class="col-md-3 builton-logo">
+  				<img src="../img/NPM.png">
+			</div>
+  			<div class="col-md-3 builton-logo">
+  				<img src="../img/heroku.png">
+			</div>
+  		</div>
+  		
+	</div> <!--  container  -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+	    $('#twitter-handle').keydown(function(event){ 
+	        var keyCode = (event.keyCode ? event.keyCode : event.which);   
+	        if (keyCode == 13) {
+		    	if ( $('#twitter-handle').val() == '' ) {
+		    		$('#error-text').show();
+		    	} else {
+		    		$('#error-text').hide();
+		    		var newURL = 'http://localhost:8080/tf/#/' + $('#twitter-handle').val();
+		    		window.location.href = newURL;
+		    	}
+	        }
+	    });
+	</script>
+  </body>
+</html>

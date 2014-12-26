@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background-image: linear-gradient(-180deg, #03242B 0%, #2CDBFF 100%);
+}
+
+input::-webkit-input-placeholder{
+    color:#A3EFFF;
+}
+input:-moz-placeholder {
+    color:#A3EFFF;
+}
+
+.twitter-icon {
+	padding: 25px 25px;
+}
+
+.handle-search {
+	right: 0;
+	position: absolute;
+	padding: 25px 25px;
+}
+
+.text1 {
+	/* @Search handle text: */
+	font-family: HelveticaNeue-Medium !IMPORTANT;
+	font-size: 20px !IMPORTANT;
+	color: #A3EFFF !IMPORTANT;
+	line-height: 25px !IMPORTANT;
+}
+
+.handle-input {
+	/* Rectangle 7: */
+	background-color: #00485B !IMPORTANT;
+	border: 2px solid #F57F18 !IMPORTANT;
+	border-radius: 19px !IMPORTANT;
+}
+
+/* Profile window */
+.profile-window {
+	/* Rectangle 12: */
+	width: 290px;
+	height: 159px;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 4px 0px rgba(245,127,23,0.50), inset 0px 1px 3px 0px rgba(255,255,255,0.50), inset 0px -1px 3px 0px rgba(3,36,43,0.50);
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.profile-image {
+	padding: 0px 5px 5px 10px
+}
+
+.profile-name {
+	/* Mark Sacks, MA, PCC: */
+	font-family: HelveticaNeue-Bold;
+	font-size: 18px;
+	color: #03242B;
+	line-height: 23px;
+	margin: 0px !IMPORTANT;
+}
+
+.profile-handle {
+	/* @danmartines: */
+	font-family: HelveticaNeue;
+	font-size: 14px;
+	color: #8899A6;
+	line-height: 16px;
+	margin: 0px !IMPORTANT;
+}
+
+.profile-description {
+	/* CIO @visresearch. Fo: */
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #66757F;
+	line-height: 17px;
+	padding: 0px 10px 0px 10px;
+	overflow-y: hidden;
+	height: 78px;
+}

@@ -1,0 +1,22 @@
+<h2>Twitter</h2>
+<h3>Screen Name: {{ screenName }}</h3>
+Filter: <input type="text" ng-model="searchtext" />
+<br /><br />
+<table>
+    <tr>
+        <th ng-click="doSort('name')">Name</th>
+        <th ng-click="doSort('name')">Handle</th>
+        <th ng-click="doSort('location')">Location</th>
+        <th ng-click="doSort('followers_count')">Follower Count</th>
+        <th ng-click="doSort('created_at')">Joined</th>
+    </tr>
+    <tr ng-repeat="f in followers | filter:searchtext | orderBy:sortBy:reverse">
+        <td><img src="{{ f.profile_image_url }}">{{ f.name }}</td>
+        <td><a href="#/{{ f.screen_name }}">{{ f.screen_name }}</a></td>
+        <td>{{ f.location }}</td>
+        <td>{{ f.followers_count }}</td>
+        <td>{{ f.created_at | date }}</td>
+    </tr>
+</table>
+<br />
+<span>Total followers: {{ followers.length }}</span>

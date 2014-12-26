@@ -1,0 +1,64 @@
+  	<div class="container">
+	  	<div class="row">
+		    <div class="col-md-4">
+		    	<div class="profile-window">
+		    		<div style="display: -webkit-inline-box; padding-top:10px;">
+		    			<div>
+			    			<img src="{{ profile.profile_image_url }}" class="profile-image">
+			    		</div>
+			    		<div>
+				    		<p class="profile-name">{{ profile.name }}</p>
+				    		<p class="profile-handle">{{ profile.screen_name }}</p>
+				    		<p class="profile-handle">{{ profile.followers_count }} followers</p>
+			    		</div>
+		    		</div>
+		    		<div>
+		    			<p class="profile-description">{{ profile.description }}</p>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="col-md-8">
+		    	<div style="display: -webkit-inline-box;">
+		    		<input type="text" name="search" class="follower-search text2" ng-model="searchtext" placeholder="Search followers" style="text-align:left; "></br>
+		    		<p class="text2" style="padding: 3px 0px 0px 10px;">
+		    			Order by:
+		    			<a ng-click="doSort('name')" class="text2" style="text-decoration: underline;">Name</a>
+		    			<a ng-click="doSort('followers')" class="text2" style="text-decoration: underline;">Location</a>
+		    			<a ng-click="doSort('followers_count')" class="text2" style="text-decoration: underline;">Followers</a>
+		    		</p>
+		    		<p style="padding: 3px 0px 0px 10px;"></p>
+		    		<p style="padding: 3px 0px 0px 10px;"></p>
+		    		<p style="padding: 3px 0px 0px 10px;"></p>
+		    	</div>
+		    	<!--  <div style="padding-left:8px;">
+		    		<p class="text2" style="text-align: left; ">Keywords: #developer, CTO, technology, design, strategy,news, #python, #javascript, snowboarding</p>
+		    	</div> -->
+		    </div>
+	    </div><!--  row 1  -->
+	    <!--  row - status code is ok  -->
+	    <div ng-if="followers.statusCode == undefined" class="row" style="padding-top:20px; ">
+		    <div class="col-md-4" ng-repeat="f in followers | filter:searchtext | orderBy:sortBy:reverse">
+		    	<div class="profile-window">
+		    		<div style="display: -webkit-inline-box; padding-top:10px;">
+		    			<div>
+			    			<img src="{{ f.profile_image_url }}" class="profile-image">
+			    		</div>
+			    		<div>
+				    		<p class="profile-name">{{ f.name }}</p>
+				    		<p class="profile-handle"><a href="#/{{ f.screen_name }}">{{ f.screen_name }}</a></p>
+				    		<p class="profile-handle">{{ f.followers_count }} followers</p>
+			    		</div>
+		    		</div>
+		    		<div>
+		    			<p class="profile-description">{{ f.description }}</p>
+		    		</div>
+		    	</div>
+		    </div>
+	    </div> <!--  row - status code is ok  -->
+	    <!--  row - status code is ok  -->
+	    <div ng-if="followers.statusCode != undefined" class="row" style="padding-top:20px; ">
+		    <div class="span12">
+		    	<p class="text1">Followers not found for {{ screenName }}</p>
+		    </div>
+	    </div> <!--  row - status code is ok  -->
+	</div> <!--  container  -->

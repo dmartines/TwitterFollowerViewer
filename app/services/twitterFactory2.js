@@ -1,0 +1,25 @@
+angular.module('twitterApp')
+    .factory('twitterFactory2', ['$q','$http', function($q, $http) {
+
+    var twitterFactory2 = {};
+    
+	twitterFactory2.getProfile = function(sn) {
+		var deferred = $q.defer();
+		$http.get('/user_lookup/'+ sn)
+    		.success(function(data, status, headers, config) {
+    			deferred.resolve(data);
+    		});
+    	return deferred.promise;
+    };
+
+	twitterFactory2.getFollowers = function(sn) {
+		var deferred = $q.defer();
+		$http.get('/followers/'+ sn)
+    		.success(function(data, status, headers, config) {
+    			deferred.resolve(data);
+    		});
+    	return deferred.promise;
+    };
+
+    return twitterFactory2;
+}]);

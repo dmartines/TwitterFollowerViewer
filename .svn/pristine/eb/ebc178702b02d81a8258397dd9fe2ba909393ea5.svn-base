@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="twitterApp">
+<head>
+    <title>Twitter Followers1</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <!-- <base href="/">  -->
+</head>
+<body>
+    
+    <div ng-view></div>
+    
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/services/twitterFactory.js"></script>
+    <script src="app/services/twitterFactory2.js"></script>
+    <script src="app/services/values.js"></script>
+    <script src="app/controllers/twitterController.js"></script>
+    <script src="app/controllers/twitterController2.js"></script>
+</body>
+</html>
